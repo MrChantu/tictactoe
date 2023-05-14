@@ -75,9 +75,11 @@ const TicTacToe = () => {
         const winner = checkWinner(updatedBoard);
         setPlayerCanClick(false);
         if (winner) {
-            setGameOver(true);
-            setGameWinner(winner);
-            console.log(winner);
+            setTimeout(() => {
+                setGameOver(true);
+                setGameWinner(winner);
+                console.log(winner);
+            }, 1000);
         } else {
             setFinishedChecking(true);
         }

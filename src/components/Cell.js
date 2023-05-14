@@ -30,7 +30,7 @@ const Cell = (props) => {
             onClick={handleClick}
             onMouseMove={handleMouseMove}
             style={
-                props.canPlayerClick
+                props.canPlayerClick && props.value === ""
                     ? {
                           "--mouse-x": `${mousePos.x}px`,
                           "--mouse-y": `${mousePos.y}px`,
